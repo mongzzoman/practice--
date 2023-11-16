@@ -1,0 +1,51 @@
+파일명 : robots.txt
+
+검색로봇에게 사이트나 웹 페이지를 수집할 수 있도록 허용/제한
+
+이미지  폴더와 따로 놔둬야 함 (상위 폴더 안에 위치시키기)
+
+
+- 검색엔진 로봇 모두 수집 허용
+User-agent: * ( * : 모두)
+Allow: /
+
+- 네이버에서만 검색 로봇이 허용되게 하고 싶으면 (naver를 yeti로 사용함)
+User-agent: *
+Disallow: /
+User-agent : Yeti
+Allow: /
+
+- naver -> Yeti
+- googlt -> Googlebot
+- daum -> Daumoa
+
+- 개인정보가 들어있는 페이지나 관리자 페이지는 허용하지 않게 하려면
+User-agent : Yeti
+Disallow : /private*/
+
+- 검색 엔진 아예 허용하지 않게 하려면 (모든 로봇 차단)
+User-agent: *
+Disallow : /
+
+
+
+
+
+
+title 아래에
+
+<!-- 검색엔진, 로봇이 리스트에 들어가도록 허락해주는 것 -->
+    <meta name="robots" content="All">
+    <meta name="Yeti" content="index, follow">
+    <meta name="Yeti" content="All">
+    <meta name="googlebot" content="All">
+    <meta name="googlebot" content="index, follow">
+    <meta name="dauma" content="All">
+    <meta name="dauma" content="index, follow">
+    <meta name="title" content="웹디자이너 - 임예나 포트폴리오">
+    <meta name="description" content="웹디자이너 임예나입니다. 포트폴리오 방문을 환영">
+    <meta name="keywords" content="웹디자이너, 웹퍼블리셔, 대구 디자이너">
+    <meta name="author" content="임예나">
+    <meta name="content-language" content="kr">
+
+작성하면 됨
